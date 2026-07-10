@@ -63,10 +63,10 @@ task downloadDependencies(type: Exec) {
 
         // Download all *.jar dependencies & verify their MD5 checksums.
         def filesToDownload = [
-            ["url": "https://github.com/rkalsky/libmpv-android-video-build/releases/download/vnext/default-arm64-v8a.jar", "md5": "dae43e7a883fbfa33e34f0699c794f63", "destination": file("$buildDir/vnext/default-arm64-v8a.jar")],
-            ["url": "https://github.com/rkalsky/libmpv-android-video-build/releases/download/vnext/default-armeabi-v7a.jar", "md5": "e83e7c7b134a05242cd20b3628246497", "destination": file("$buildDir/vnext/default-armeabi-v7a.jar")],
-            ["url": "https://github.com/rkalsky/libmpv-android-video-build/releases/download/vnext/default-x86_64.jar", "md5": "91ad8abe21206aeafecb20c214f47173", "destination": file("$buildDir/vnext/default-x86_64.jar")],
-            ["url": "https://github.com/rkalsky/libmpv-android-video-build/releases/download/vnext/default-x86.jar", "md5": "464c8c5e94c485dc8a8cc5cb0d6d9e04", "destination": file("$buildDir/vnext/default-x86.jar")]
+            ["url": "https://github.com/rkinnc75/libmpv-android-video-build/releases/download/vnext/default-arm64-v8a.jar", "md5": "a1b083ed6b73b812b207c5deeada5fd7", "destination": file("$buildDir/vnext/default-arm64-v8a.jar")],
+            ["url": "https://github.com/rkinnc75/libmpv-android-video-build/releases/download/vnext/default-armeabi-v7a.jar", "md5": "62885dc52e28ec44e5fcb385021839a3", "destination": file("$buildDir/vnext/default-armeabi-v7a.jar")],
+            ["url": "https://github.com/rkinnc75/libmpv-android-video-build/releases/download/vnext/default-x86_64.jar", "md5": "0b502bf54db409861a59c6b5d97b00ff", "destination": file("$buildDir/vnext/default-x86_64.jar")],
+            ["url": "https://github.com/rkinnc75/libmpv-android-video-build/releases/download/vnext/default-x86.jar", "md5": "5b2abbd74cbf6f49106a602b80bf09cd", "destination": file("$buildDir/vnext/default-x86.jar")]
         ]
 
         filesToDownload.each { fileInfo ->
