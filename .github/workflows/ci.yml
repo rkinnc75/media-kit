@@ -109,15 +109,6 @@ jobs:
         with:
           name: media_kit_test_win32_x64
           path: media_kit_test/media_kit_test_win32_x64.7z
-      - uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          draft: true
-          prerelease: false
-          tag_name: "vnext"
-          files: |
-            media_kit_test/media_kit_test_win32_x64.7z
-
   linux:
     name: Linux
     runs-on: ubuntu-latest
@@ -141,15 +132,6 @@ jobs:
         with:
           name: media_kit_test_linux_x64
           path: media_kit_test/media_kit_test_linux_x64.7z
-      - uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          draft: true
-          prerelease: false
-          tag_name: "vnext"
-          files: |
-            media_kit_test/media_kit_test_linux_x64.7z
-
   macos:
     name: macOS
     runs-on: macos-latest
@@ -171,15 +153,6 @@ jobs:
         with:
           name: media_kit_test_macos_universal
           path: media_kit_test/media_kit_test_macos_universal.7z
-      - uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          draft: true
-          prerelease: false
-          tag_name: "vnext"
-          files: |
-            media_kit_test/media_kit_test_macos_universal.7z
-
   ios:
     name: iOS
     runs-on: macos-latest
@@ -201,15 +174,6 @@ jobs:
         with:
           name: media_kit_test_ios_arm64
           path: media_kit_test/media_kit_test_ios_arm64.7z
-      - uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          draft: true
-          prerelease: false
-          tag_name: "vnext"
-          files: |
-            media_kit_test/media_kit_test_ios_arm64.7z
-
   android:
     name: Android
     runs-on: ubuntu-latest
@@ -249,16 +213,6 @@ jobs:
         with:
           name: media_kit_test_android-x86_64
           path: media_kit_test/build/app/outputs/flutter-apk/media_kit_test_android-x86_64.apk
-      - uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          draft: true
-          prerelease: false
-          tag_name: "vnext"
-          files: |
-            media_kit_test/build/app/outputs/flutter-apk/media_kit_test_android-armeabi-v7a.apk
-            media_kit_test/build/app/outputs/flutter-apk/media_kit_test_android-arm64-v8a.apk
-            media_kit_test/build/app/outputs/flutter-apk/media_kit_test_android-x86_64.apk
   build_web:
     name: Build Flutter Web
     runs-on: ubuntu-latest
